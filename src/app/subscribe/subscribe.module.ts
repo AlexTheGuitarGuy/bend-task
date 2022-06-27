@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SubscribeComponent } from './subscribe/subscribe.component';
+import { SubscribeComponent } from './subscribe.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FilterConnectedPipe } from '../shared/pipes/filter-connected.pipe';
 
 const routes: Routes = [
   {
@@ -11,7 +12,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [SubscribeComponent],
+  declarations: [SubscribeComponent, FilterConnectedPipe],
   imports: [CommonModule, RouterModule.forChild(routes)],
   exports: [RouterModule],
 })

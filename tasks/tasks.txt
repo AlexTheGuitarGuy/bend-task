@@ -1,4 +1,3 @@
-* Toata structura sa fie separata in componente, fiecare componenta sa se ocupe doar de scopul ei.
 * Toate componentele trebuie sa contina aceasta setare `changeDetection: ChangeDetectionStrategy.OnPush`.
 * Structureaza in doua module cu routing pentru a face doua implementari diferite:
 	* Module 1: in componente folosesti 'Subscribe' pentru a citi datele din serviciu.
