@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {Area, Thing } from '../interfaces';
-import {HttpClient} from "@angular/common/http";
+import { Area, Thing } from '../interfaces';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getThings(): Observable<Thing[]> {
-    return this.http.get<Thing[]>('assets/data/things.json')
+    return this.http.get<Thing[]>('assets/data/things.json');
   }
   getAreas(): Observable<Area[]> {
-    return this.http.get<Area[]>('assets/data/areas.json')
+    return this.http.get<Area[]>('assets/data/areas.json');
   }
 }
