@@ -1,13 +1,29 @@
+Sarcină:
+
+* Cele doua fisiere JSON le incarci intrun Serviciu (Angular) prin intermediul unui API REST (GET).
+* Serviciu trebuie sa contina minim doua functii:
+```typescript
+class ExampleService {
+getThings(): Observable<Thing[]> {}
+getAreas(): Observable<Area[]> {}
+}
+```
+* Toata structura sa fie separata in componente, fiecare componenta sa se ocupe doar de scopul ei.
 * Toate componentele trebuie sa contina aceasta setare `changeDetection: ChangeDetectionStrategy.OnPush`.
 * Structureaza in doua module cu routing pentru a face doua implementari diferite:
-	* Module 2: in componente nu folosesti 'Subscribe' dar o sa folosesti `async` pipe in template.
+* Module 1: in componente folosesti 'Subscribe' pentru a citi datele din serviciu.
+* Module 2: in componente nu folosesti 'Subscribe' dar o sa folosesti `async` pipe in template.
+* Setezi eslint pentru proiect.
+* Setezi prettier pentru proiect.
+* Setezi stylelint pentru proiect.
 * Fiecare punct de mai sus trebuie sa fie un commit pe git.
 * Incarca proiectul intr-un public manage Git repositories si respectiv trimite link-ul catre proiectul tau.
 
 Succes la sarcină!
 
- 
-
-Cu respect,
-
-Cristina
+My tasks:
+	-make breakpoints
+	-make correct import order, import cleanup
+	-DRY
+	-make route switching if else into ternary operator
+	-make tests

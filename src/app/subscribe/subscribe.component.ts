@@ -13,7 +13,6 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-subscribe',
   templateUrl: './subscribe.component.html',
-  styleUrls: ['./subscribe.component.sass'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SubscribeComponent implements OnInit, OnDestroy {

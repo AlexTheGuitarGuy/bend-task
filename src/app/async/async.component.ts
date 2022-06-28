@@ -6,7 +6,6 @@ import { DataService } from '../shared/services/data.service';
 @Component({
   selector: 'app-async',
   templateUrl: './async.component.html',
-  styleUrls: ['./async.component.sass'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AsyncComponent implements OnInit {

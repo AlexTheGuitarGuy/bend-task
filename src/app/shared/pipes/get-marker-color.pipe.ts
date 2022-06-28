@@ -18,9 +18,7 @@ export class GetMarkerColorPipe implements PipeTransform {
     const connectedThings = this.getConnectedTo(id, things);
     const connectedThingsLength = connectedThings.length + 1;
 
-    this.getConnectedTo(id, things).map(
-      thing => thing.status === 'open' && openThings++
-    );
+    connectedThings.map(thing => thing.status === 'open' && openThings++);
     if (this.getThing(id, things).status === 'open') openThings++;
 
     if (openThings === connectedThingsLength) return '#f4e700';
