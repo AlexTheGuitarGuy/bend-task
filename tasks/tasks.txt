@@ -1,6 +1,5 @@
 * Toate componentele trebuie sa contina aceasta setare `changeDetection: ChangeDetectionStrategy.OnPush`.
 * Structureaza in doua module cu routing pentru a face doua implementari diferite:
-	* Module 1: in componente folosesti 'Subscribe' pentru a citi datele din serviciu.
 	* Module 2: in componente nu folosesti 'Subscribe' dar o sa folosesti `async` pipe in template.
 * Fiecare punct de mai sus trebuie sa fie un commit pe git.
 * Incarca proiectul intr-un public manage Git repositories si respectiv trimite link-ul catre proiectul tau.
