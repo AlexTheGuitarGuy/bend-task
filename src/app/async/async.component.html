@@ -1,37 +1,6 @@
 <div *ngIf="areas$ | async as areas; else loading">
   <div *ngIf="things$ | async as things; else loading">
-    <div *ngFor="let area of areas">
-      <h3 class="areaName">{{ area.name }}</h3>
-
-      <div class="areaContent">
-        <div *ngFor="let thing of things | filterConnected">
-          <div *ngIf="thing.areaId === area.areaId" class="relativeWrapper">
-            <div class="container">
-              <div
-                class="marker"
-                [ngStyle]="{
-                  'background-color': thing.id | getMarkerColor: things
-                }"></div>
-
-              <div class="defaultSku">{{ thing.defaultSku }}</div>
-
-              <div class="sku">{{ thing.sku }}</div>
-            </div>
-            <div
-              *ngFor="let connectedThing of thing.id | getConnectedTo: things"
-              class="relativeWrapper">
-              <div class="connection"></div>
-
-              <div class="container">
-                <div class="defaultSku">{{ connectedThing.defaultSku }}</div>
-
-                <div class="sku">{{ connectedThing.sku }}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-interface [areas]="areas" [things]="things"></app-interface>
   </div>
 </div>
 
