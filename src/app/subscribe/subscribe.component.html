@@ -9,7 +9,7 @@
             <div
               class="marker"
               [ngStyle]="{
-                'background-color': getMarkerColor(thing.id)
+                'background-color': thing.id | getMarkerColor: things
               }"></div>
 
             <div class="defaultSku">{{ thing.defaultSku }}</div>
@@ -17,9 +17,10 @@
             <div class="sku">{{ thing.sku }}</div>
           </div>
           <div
-            *ngFor="let connectedThing of getConnectedThings(thing.id)"
+            *ngFor="let connectedThing of thing.id | getConnectedTo: things"
             class="relativeWrapper">
             <div class="connection"></div>
+
             <div class="container">
               <div class="defaultSku">{{ connectedThing.defaultSku }}</div>
 
@@ -33,5 +34,7 @@
 </div>
 
 <ng-template #loading>
-  <div>Loading...</div>
+  <div>
+    <img src="/assets/Ajax-Preloader.gif" alt="Loading..." />
+  </div>
 </ng-template>

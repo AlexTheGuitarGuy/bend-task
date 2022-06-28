@@ -39,29 +39,6 @@ export class SubscribeComponent implements OnInit, OnDestroy {
     });
   }
 
-  getThing(id: number): Thing {
-    return this.things.filter(thing => thing.id === id)[0];
-  }
-
-  getConnectedThings(id: number): Thing[] {
-    return this.things.filter(thing => thing.joinedWith === id);
-  }
-
-  getMarkerColor(id: number): string {
-    let openThings = 0;
-    const connectedThings = this.getConnectedThings(id);
-    const connectedThingsLength = connectedThings.length + 1;
-
-    this.getConnectedThings(id).map(
-      thing => thing.status === 'open' && openThings++
-    );
-    if (this.getThing(id).status === 'open') openThings++;
-
-    if (openThings === connectedThingsLength) return '#f4e700';
-    if (openThings === 0) return '#f64d25';
-    else return '#ff9800';
-  }
-
   ngOnDestroy() {
     if (this.areasSub) this.areasSub.unsubscribe();
     if (this.thingsSub) this.thingsSub.unsubscribe();
