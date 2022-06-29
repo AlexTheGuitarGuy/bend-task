@@ -13,14 +13,16 @@ export class MainLayoutComponent implements OnInit {
   otherModule = '';
 
   ngOnInit() {
-    if (this.router.url.includes('subscribe')) this.otherModule = 'async';
-    else this.otherModule = 'subscribe';
+    this.otherModule = this.router.url.includes('subscribe')
+      ? 'async'
+      : 'subscribe';
   }
 
   switchRoute() {
     this.router.navigate([this.otherModule]).then(() => {
-      if (this.router.url.includes('subscribe')) this.otherModule = 'async';
-      else this.otherModule = 'subscribe';
+      this.otherModule = this.router.url.includes('subscribe')
+        ? 'async'
+        : 'subscribe';
     });
   }
 }

@@ -5,10 +5,10 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { Thing } from 'src/app/shared/interfaces';
-import { Area } from 'src/app/shared/interfaces';
-import { DataService } from '../shared/services/data.service';
 import { Subscription } from 'rxjs';
+
+import { Area, Thing } from 'src/app/shared/interfaces';
+import { DataService } from '../shared/services/data.service';
 
 @Component({
   selector: 'app-subscribe',

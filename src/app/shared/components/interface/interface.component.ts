@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Thing } from '../../interfaces';
-import { Area } from '../../interfaces';
+
+import { Area, Thing } from '../../interfaces';
 
 @Component({
   selector: 'app-interface',

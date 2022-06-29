@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Area, Thing } from '../shared/interfaces';
 import { Observable } from 'rxjs';
+
+import { Area, Thing } from '../shared/interfaces';
 import { DataService } from '../shared/services/data.service';
 
 @Component({

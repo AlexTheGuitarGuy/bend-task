@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SubscribeComponent } from './subscribe.component';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { SubscribeComponent } from './subscribe.component';
 import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [

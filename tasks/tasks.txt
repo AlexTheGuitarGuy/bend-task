@@ -23,7 +23,4 @@ Succes la sarcină!
 
 My tasks:
 	-make breakpoints
-	-make correct import order, import cleanup
-	-DRY
-	-make route switching if else into ternary operator
 	-make tests
