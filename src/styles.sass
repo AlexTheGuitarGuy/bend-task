@@ -1,5 +1,12 @@
+@import "./breakpoints"
+
 html
   font-size: 15px
+
+  @include xxl
+    font-size: 20px
+  @include xxl
+    font-size: 25px
 
 body
   background-color: #19263b
@@ -23,16 +30,26 @@ h1, h2, h3, h4, h5, h6
   display: inline-block
   background: #2b4e87
   color: white
-  padding: 0.4rem 1.3rem
-  font-size: 1rem
   border: none
   border-radius: 0.5rem
   cursor: pointer
   margin: 1rem 0 1rem 2rem
   transition: color 0.2s ease-in
   outline: none
+  padding: 0.4rem 1.3rem
+
+  @include sm
+    font-size: 0.8rem
+  @include md
+    font-size: 1rem
+  @include lg
+    font-size: 1.2rem
+  @include xl
+    font-size: 1.2rem
+
   &:hover
     background: #1e3d77
+
   &:active
     background: #132f62
 

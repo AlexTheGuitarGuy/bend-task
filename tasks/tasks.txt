@@ -22,5 +22,4 @@ getAreas(): Observable<Area[]> {}
 Succes la sarcină!
 
 My tasks:
-	-make breakpoints
 	-make tests

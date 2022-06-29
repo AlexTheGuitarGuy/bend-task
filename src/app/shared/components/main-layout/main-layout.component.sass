@@ -1,5 +1,14 @@
+@import "../../../../breakpoints"
+
 .layout
   width: 100%
-  max-width: 1030px
+  max-width: 1000px
   margin: 0 auto
   padding: 0 1rem
+
+  @include lg
+    max-width: 1200px
+  @include xl
+    max-width: 1700px
+  @include xxl
+    max-width: 2300px
