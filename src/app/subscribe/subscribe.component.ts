@@ -41,5 +41,6 @@ export class SubscribeComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     if (this.areasSub) this.areasSub.unsubscribe();
     if (this.thingsSub) this.thingsSub.unsubscribe();
+    this.cdRef.detectChanges();
   }
 }

@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainLayoutComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(public router: Router) {}
 
   otherModule = '';
 

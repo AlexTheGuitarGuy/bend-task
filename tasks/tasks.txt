@@ -20,6 +20,3 @@ getAreas(): Observable<Area[]> {}
 * Incarca proiectul intr-un public manage Git repositories si respectiv trimite link-ul catre proiectul tau.
 
 Succes la sarcină!
-
-My tasks:
-	-make tests
